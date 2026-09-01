@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>OFT Gold Fart Cruise App — Day 4</title>
+<title>OFT Gold Fart Cruise App — Day 3</title>
 <style>
 :root{--navy:#0B1F3A;--red:#D72638;--gold:#F4C542;--cream:#F7F5F0;--ink:#142033;--muted:#5E6877;--card:#FFFFFF;--line:#E7DED0;--shadow:0 6px 18px rgba(11,31,58,.10)}
 *{box-sizing:border-box} html{background:var(--cream)}
@@ -24,13 +24,13 @@ h1{margin:0;color:var(--navy);font-size:clamp(2rem,8vw,3.35rem);line-height:1;le
 .toolbox{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .tool{text-decoration:none;color:var(--navy);border:1.5px solid #e8c46a;border-radius:16px;min-height:88px;padding:14px;display:flex;align-items:center;gap:12px;font-weight:900;background:linear-gradient(180deg,#fff,#fffaf0)}
 .tool small{display:block;font-weight:600;color:var(--muted);margin-top:3px}
-.tip{background:linear-gradient(135deg,#fff8dc 0%,#fff 65%)} .tip p{margin:.35rem 0;line-height:1.45}
+.tip{background:linear-gradient(135deg,#fff8dc 0%,#fff 65%)} .tip-block{padding:10px 0;border-top:1px solid #eadfcb} .tip-block:first-of-type{border-top:none;padding-top:0}
+.tip-block h3{margin:0 0 4px;color:var(--navy);font-size:1.03rem} .tip-block p{margin:.25rem 0;line-height:1.45}
 .bonus{display:grid;grid-template-columns:145px 1fr;gap:16px;align-items:center}
 .bonus img{width:145px;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid #e9e1d5;background:#f3eee7}
 .bonus.logo img{aspect-ratio:1/1;object-fit:contain;padding:5px;background:#fff}
 .bonus h3{margin:0 0 5px;color:var(--navy);font-size:1.18rem} .bonus p{margin:0;line-height:1.4;color:#334155}
 .bonus strong{color:var(--red)} .bonus-label{color:var(--red);font-weight:900;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
-.bonus-link{display:inline-flex;margin-top:12px;padding:10px 14px;border-radius:999px;text-decoration:none;background:var(--red);color:#fff;font-weight:900;font-size:.84rem}
 .fixedbar{position:fixed;left:0;right:0;bottom:0;z-index:10;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,245,240,.94);backdrop-filter:blur(10px);border-top:1px solid #ddd3c6}
 .fixedinner{max-width:760px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .fixedbtn{min-height:58px;border-radius:16px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:9px;font-weight:900;box-shadow:0 5px 14px rgba(0,0,0,.12)}
@@ -56,82 +56,73 @@ h1{margin:0;color:var(--navy);font-size:clamp(2rem,8vw,3.35rem);line-height:1;le
 
 <div class="oft-lock" id="oft-lock"><div class="oft-lock-card">
 <div class="oft-lock-kicker">OFT SECURITY DEPARTMENT</div><h1>Prove You Belong Here</h1>
-<p>Welcome back to Fort Lauderdale! Now that you’ve enjoyed the ship, tell me who is the main character on the back of the ship?</p><form id="oft-lock-form"><input id="oft-lock-answer" type="text" autocomplete="off" autocapitalize="off" placeholder="Your answer"><button type="submit">UNLOCK</button></form>
+<p>Welcome to Nassau! When people come here to visit, they always think of the place as the city where you are docked. But what is the name of the island that Nassau is located on?</p><form id="oft-lock-form"><input id="oft-lock-answer" type="text" autocomplete="off" autocapitalize="off" placeholder="Your answer"><button type="submit">UNLOCK</button></form>
 <p class="oft-lock-error" id="oft-lock-error"></p><p class="oft-lock-note">Spaces and capitalization don’t matter.</p>
 </div></div>
 <script>
 (function(){
- const k="oft-unlocked-day4";
+ const k="oft-unlocked-day3";
  if(sessionStorage.getItem(k)==="yes"){document.getElementById("oft-lock").remove();return;}
- const n=s=>(s||"").toLowerCase().replace(/\s+/g,""), expected="spiderman";
+ const n=s=>(s||"").toLowerCase().replace(/\s+/g,""), expected="newprovidence";
  const form=document.getElementById("oft-lock-form"),input=document.getElementById("oft-lock-answer"),err=document.getElementById("oft-lock-error");
  form.addEventListener("submit",e=>{e.preventDefault();if(n(input.value)===expected){sessionStorage.setItem(k,"yes");document.getElementById("oft-lock").remove();}else{err.textContent="Nope. The OFT bouncer remains unconvinced.";input.select();}});
  setTimeout(()=>input.focus(),100);
 })();
 </script>
 <header class="top">
-  <img src="embedded-assets/img-f65c539f8e4df0ed.jpg" alt="Old Fart Roadtrip logo">
+  <img src="embedded-assets/img-89d70985e349e7bc.png" alt="Old Fart Nassau logo">
 </header>
-
 <main>
   <section class="card daycard">
-    <div class="eyebrow">Day 4</div>
-    <h1>Welcome back to Port Everglades!</h1>
-    <div class="date">Monday, September 21, 2026</div>
+    <div class="eyebrow">Day 3</div>
+    <h1>Welcome to Nassau!</h1>
+    <div class="date">Sunday, September 20, 2026</div>
   </section>
 
   <section class="card">
     <div class="section-title"><span class="icon">★</span>DAILY HIGHLIGHTS</div>
-    <div class="highlight"><h3>🍳 8:00 a.m. — Breakfast</h3><p>Same restaurant as last night’s dinner.</p></div>
-    <div class="highlight"><h3>🚢 9:00 a.m. — Disembark</h3><p>Pick up the rental car and begin the final chapter.</p></div>
-    <div class="highlight"><h3>🚗 10:00 a.m. — Fort Lauderdale Drive</h3><p>Cruise through Fort Lauderdale Beach Park and the marina area.</p></div>
-    <div class="highlight"><h3>🍽️ 11:30 a.m. — Lunch at Coconuts</h3><p>One last waterfront meal before the airport.</p></div>
-    <div class="highlight"><h3>✈️ 1:30 p.m. — Airport Drop-Off</h3><p>Joan and Bill drop Robin and John at FLL.</p></div>
-    <div class="highlight"><h3>🛫 3:40 p.m. — Southwest Flight 1956</h3><p>FLL → BWI<br>Arrives <strong>6:15 p.m.</strong></p></div>
+
+    <div class="highlight"><h3>☕ Breakfast — Coffee. Only Coffee.</h3><p>We have priorities.</p></div>
+    <div class="highlight"><h3>🥂 Noon — Palo Brunch</h3><p>The main event.</p></div>
+    <div class="highlight"><h3>🚶 After Brunch — Lots of Walking</h3><p>There will be consequences.</p></div>
+    <div class="highlight"><h3>🎭 Late Afternoon — Costume Prep</h3><p>Time to get respectable. Or at least themed.</p></div>
+    <div class="highlight"><h3>⚡ 5:45 p.m. — Disney’s Hercules</h3><p><strong>IN COSTUME.</strong></p></div>
+    <div class="highlight"><h3>🎃 7:00 p.m. — Trick-or-Treating / Mouse-querade Party</h3><p>Halloween on the High Seas is officially underway.</p></div>
+    <div class="highlight"><h3>🍴 8:15 p.m. — Dinner</h3><p>Rotational dining assignment to be announced.</p></div>
+    <div class="highlight"><h3>🎹 Late Option — DeVil’s Piano Lounge</h3><p>Because apparently one costume change isn’t enough.</p></div>
   </section>
 
   <section class="card">
     <div class="section-title"><span class="icon">🧰</span>TOOLBOX</div>
     <div class="toolbox">
-      <a class="tool" href="https://weather.com/us/florida/fort-lauderdale/airport/fort-lauderdale-hollywood-international-airport/today" target="_blank" rel="noopener"><span style="font-size:1.8rem">🌤️</span><span>LOCAL WEATHER<small>Fort Lauderdale</small></span></a>
-      <a class="tool" href="https://www.coconutsfortlauderdale.com/menu" target="_blank" rel="noopener"><span style="font-size:1.8rem">🍽️</span><span>LUNCH MENU<small>Coconuts</small></span></a>
-      <a class="tool" href="https://maps.app.goo.gl/Dbfq7Unj9dwo49HL6" target="_blank" rel="noopener"><span style="font-size:1.8rem">🗺️</span><span>MAP<small>FLL → Siesta Key</small></span></a>
-      <a class="tool" href="https://music.youtube.com/playlist?list=PLRQm6BSAVTsY" target="_blank" rel="noopener"><span style="font-size:1.8rem">🎵</span><span>PLAYLIST<small>OFT Roadtrip: Florida Edition</small></span></a>
+      <a class="tool" href="https://weather.com/bs/new-providence/city/nassau/today" target="_blank" rel="noopener"><span style="font-size:1.8rem">🌤️</span><span>LOCAL WEATHER<small>Nassau</small></span></a>
+      <a class="tool" href="dining/index.html"><span style="font-size:1.8rem">🍽️</span><span>ROTATIONAL DINING<small>Restaurants & menus</small></span></a>
     </div>
   </section>
 
   <section class="card tip">
-    <div class="section-title"><span class="icon">💡</span>OFT TIP</div>
-    <p>One OFT tradition went by the wayside on this trip: <strong>no need for daily driving playlists.</strong></p>
-    <p>No worries.</p>
-    <p>For the ride across Florida, Joan and Bill have their own <strong>Best of OFT — Florida Edition</strong> playlist waiting for them.</p>
-    <p><strong>Happy trails!</strong></p>
+    <div class="section-title"><span class="icon">💡</span>OFT TIPS</div>
+    <div class="tip-block"><h3>Tip One — Palo Dessert Strategy</h3><p>Get all of the desserts.</p><p><strong>It’s PALO.</strong></p></div>
+    <div class="tip-block"><h3>Tip Two — Football Exists</h3><p>The Ravens host the Saints at 1:00.</p><p>The Raiders play the Chargers at 4:00.</p><p>The Commanders are in Dallas at 4:25.</p><p>Games are shown in the Cask & Cannon and may also be available in your stateroom.</p></div>
+    <div class="tip-block"><h3>Tip Three — Tomorrow Is Coming</h3><p>Bags have to be in the hallway by <strong>10:00 p.m.</strong></p><p>Given the extra costume burden tonight, you may want to consider walking off with your bags tomorrow instead of putting them out for the stateroom attendant.</p></div>
   </section>
 
   <section class="card bonus">
-    <img src="embedded-assets/img-959c04f54239b913.png" alt="The Great Detour movie poster">
-    <div>
-      <div class="bonus-label">Daily Bonus Feature 1</div>
-      <h3>The Great Detour</h3>
-      <p>Two thousand miles from home.</p>
-      <p style="margin-top:6px">One mile from disaster.</p>
-      <p style="margin-top:6px">Some road-trip legends are born from spectacular scenery. Others begin with somebody saying:</p>
-      <p style="margin-top:6px"><strong>“I really need a bathroom.”</strong></p>
-    </div>
+    <img src="embedded-assets/img-9b3204ba6293d6fe.png" alt="Why Get Off the Ship Nassau ad">
+    <div><div class="bonus-label">Daily Bonus Feature 1</div><h3>Why Get Off the Ship?</h3><p>Nassau is a zoo.</p><p style="margin-top:6px">Stay aboard. Find a quiet chair. Enjoy the pool.</p><p style="margin-top:6px">Sometimes the best excursion is <strong>no excursion at all.</strong></p></div>
+  </section>
+
+  <section class="card bonus">
+    <img src="embedded-assets/img-5fa4a9dcae32f22f.png" alt="Palo Brunch ad">
+    <div><div class="bonus-label">Daily Bonus Feature 2</div><h3>Palo Brunch</h3><p>So good, it’s worth wearing pants for.</p><p style="margin-top:6px">No shorts. No regrets.</p><p style="margin-top:6px">Just brunch worth dressing for.</p></div>
   </section>
 
   <section class="card bonus logo">
-    <img src="embedded-assets/img-1e4125f45aefaf7f.jpg" alt="Old Fart Travel Road to Gold logo">
-    <div>
-      <div class="bonus-label">Daily Bonus Feature 2</div>
-      <h3>The Road to Gold</h3>
-      <p>Five cruises. Five Palo brunches. And a whole lot of evidence.</p>
-      <p style="margin-top:6px">A look back at the road — and sea — that brought us here.</p>
-      <a class="bonus-link" href="https://photos.app.goo.gl/TrrrcCWAByk4D3BV7" target="_blank" rel="noopener">OPEN THE ROAD TO GOLD →</a>
-    </div>
+    <img src="embedded-assets/img-9c5aaaed9e3a9847.jpg" alt="Halloween on the High Seas logo">
+    <div><div class="bonus-label">Daily Bonus Feature 3</div><h3>Halloween on the High Seas</h3><p>Mickey and Minnie are dressed for the occasion.</p><p style="margin-top:6px">Now it’s our turn.</p></div>
   </section>
 
-  <p class="note">Day 4 • OFT Gold Fart Cruise App</p>
+  <p class="note">Day 3 • OFT Gold Fart Cruise App</p>
 </main>
 
 <nav class="fixedbar" aria-label="Quick links">
