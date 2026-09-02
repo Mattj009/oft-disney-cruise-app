@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><script>if(sessionStorage.getItem("oft-unlocked-vault")!=="yes"){location.replace("index.html");}</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>OFT Gold Fart Cruise App — Bonus Vault</title>
+<title>OFT Gold Fart Cruise App — The Palo Ad Showdown</title>
 <style>:root{--navy:#0B1F3A;--red:#D72638;--gold:#F4C542;--cream:#F7F5F0;--ink:#142033;--muted:#5E6877;--card:#FFFFFF;--line:#E7DED0;--shadow:0 6px 18px rgba(11,31,58,.10)}
 *{box-sizing:border-box} html{background:var(--cream)}
 body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 85% 0%,rgba(244,197,66,.12),transparent 28%),var(--cream);padding-bottom:110px}
@@ -66,93 +66,57 @@ body{padding-bottom:92px!important;}
 
 </head>
 <body>
-
-<style id="oft-lock-style">
-.oft-lock{position:fixed;inset:0;z-index:99999;background:#0B1F3A;display:flex;align-items:center;justify-content:center;padding:22px;font-family:Arial,sans-serif}
-.oft-lock-card{width:min(520px,100%);background:#F7F5F0;border:3px solid #F4C542;border-radius:24px;padding:24px;box-shadow:0 18px 60px rgba(0,0,0,.42);color:#0B1F3A;text-align:center}
-.oft-lock-kicker{font-weight:900;color:#D72638;letter-spacing:.08em;font-size:.82rem;margin-bottom:8px}
-.oft-lock h1{margin:0 0 14px;font-size:1.65rem}.oft-lock p{font-size:1.03rem;line-height:1.45;margin:0 0 18px}
-.oft-lock input{width:100%;box-sizing:border-box;font-size:1.08rem;padding:14px 15px;border:2px solid #c9c0b4;border-radius:13px;background:#fff;color:#0B1F3A}
-.oft-lock button{width:100%;margin-top:12px;border:0;border-radius:13px;background:#D72638;color:#fff;font-size:1.05rem;font-weight:900;padding:14px;cursor:pointer}
-.oft-lock-error{min-height:1.25em;color:#a31320;font-weight:800;margin-top:10px!important;margin-bottom:0!important}
-.oft-lock-note{font-size:.82rem!important;opacity:.7;margin-top:10px!important;margin-bottom:0!important}
-</style>
-
-<div class="oft-lock" id="oft-lock"><div class="oft-lock-card">
-<div class="oft-lock-kicker">OFT SECURITY DEPARTMENT</div><h1>Prove You Belong Here</h1>
-<p>Enter today’s answer.</p>
-<form id="oft-lock-form"><input id="oft-lock-answer" type="text" autocomplete="off" autocapitalize="off" placeholder="Your answer"><button type="submit">UNLOCK</button></form>
-<p class="oft-lock-error" id="oft-lock-error"></p><p class="oft-lock-note">Spaces and capitalization don’t matter.</p>
-</div></div>
-<script>
-(function(){
- const k="oft-unlocked-vault";
- if(sessionStorage.getItem(k)==="yes"){document.getElementById("oft-lock").remove();return;}
- const n=s=>(s||"").toLowerCase().replace(/\s+/g,""), expected="pearl";
- const form=document.getElementById("oft-lock-form"),input=document.getElementById("oft-lock-answer"),err=document.getElementById("oft-lock-error");
- form.addEventListener("submit",e=>{e.preventDefault();if(n(input.value)===expected){sessionStorage.setItem(k,"yes");document.getElementById("oft-lock").remove();}else{err.textContent="Nope. The OFT bouncer remains unconvinced.";input.select();}});
- setTimeout(()=>input.focus(),100);
-})();
-</script>
 <header class="top"><img src="assets/logo-gold-fart-disney-cruises.jpg" alt="Gold Fart Disney Cruises logo"></header>
 <main>
   <section class="card pagecard">
-    <div class="eyebrow">Bonus Vault</div>
-    <h1>Bonus Vault</h1>
-    <p class="subhead">You made it. This is where Old Fart Travel stores the extra jokes, parody videos, questionable advertising, and a few artifacts from the OFT creative department.</p>
+    <div class="eyebrow">Bonus Feature</div>
+    <h1>The Palo Ad Showdown</h1>
+    <p class="subhead">Same assignment. Same brunch. Same basic joke. Two different AIs went into the galley, and two very different ads came out.</p>
+    <div class="btnrow"><a class="btn btn-outline" href="index.html">← Back to Bonus Vault</a></div>
   </section>
 
-  <section class="card">
-    <h2 class="section-title"><span class="icon">🔐</span>Vault Contents</h2>
-    <div class="grid">
-      <div class="vault-item">
-        <div class="content">
-          <div class="smallcaps">Item 1</div>
-          <h3>OFT Movie Posters &amp; Other Nonsense</h3>
-          <p>A gallery of posters, graphics, and assorted visual foolishness from the Old Fart Travel universe.</p>
-        </div>
-        <div class="btnrow"><a class="btn btn-primary" href="https://photos.app.goo.gl/AosKBhX3ZS7wboLRA" target="_blank" rel="noopener">Open Gallery</a></div>
-      </div>
-      <div class="divider"></div>
-      <div class="vault-item">
-        <div class="content">
-          <div class="smallcaps">Item 2</div>
-          <h3>OFT Parody Videos</h3>
-          <p>Because some ideas were too ridiculous to remain still images.</p>
-        </div>
-        <div class="btnrow"><a class="btn btn-primary" href="https://photos.app.goo.gl/eA9VHgFY3V3beUeQ7" target="_blank" rel="noopener">Watch the Videos</a></div>
-      </div>
-      <div class="divider"></div>
-      <div class="vault-item">
-        <div class="content">
-          <div class="smallcaps">Item 3</div>
-          <h3>Making of the Skechers Ad</h3>
-          <p>Go behind the scenes of one of OFT’s proudest achievements in questionable brand synergy.</p>
-        </div>
-        <div class="btnrow"><a class="btn btn-secondary" href="making-of-skechers.html">Enter the Feature</a></div>
-      </div>
-      <div class="divider"></div>
-      <div class="vault-item">
-        <div class="content">
-          <div class="smallcaps">Item 4</div>
-          <h3>Palo Ad Showdown</h3>
-          <p>The same brunch. Two different AIs. Two very different results.</p>
-        </div>
-        <div class="btnrow"><a class="btn btn-secondary" href="palo-showdown.html">See the Showdown</a></div>
-      </div>
-      <div class="divider"></div>
-      <div class="vault-item">
-        <div class="content">
-          <div class="smallcaps">Item 5</div>
-          <h3>Post-Credits Scene</h3>
-          <p>The cruise may be ending, but Old Fart Travel is not done. One last reveal awaits.</p>
-        </div>
-        <div class="btnrow"><a class="btn btn-primary" href="https://photos.app.goo.gl/MiFDoPtg5rAMpbkJA" target="_blank" rel="noopener">View Post-Credits Scene</a></div>
-      </div>
-    </div>
+  <section class="twocol">
+    <article class="card compare-card">
+      <div class="smallcaps">Exhibit A</div>
+      <h3>The Grok Version</h3>
+      <img class="featureimg" src="assets/palo-grok.jpg" alt="Grok Palo brunch ad">
+      <p>This one is fascinating. For whatever reason, Grok got unusually cautious and started acting like Disney’s lawyers were hiding under the buffet table.</p>
+      <ul class="list">
+        <li>Timid branding.</li>
+        <li>Awkward use of space.</li>
+        <li>A less focused layout.</li>
+        <li>And, most tragically, a generic waffle where a Mickey waffle clearly wanted to be.</li>
+      </ul>
+      <p>It gets the point across. But only after nervously looking over its shoulder.</p>
+    </article>
+
+    <article class="card compare-card">
+      <div class="smallcaps">Exhibit B</div>
+      <h3>The ChatGPT Version</h3>
+      <img class="featureimg" src="assets/palo-chatgpt.jpg" alt="ChatGPT Palo brunch ad">
+      <p>This version understood the assignment. It leaned into the actual joke: <strong>Palo brunch is so good, it’s worth wearing pants for.</strong></p>
+      <ul class="list">
+        <li>Better use of the page.</li>
+        <li>More visual presence for the food.</li>
+        <li>A stronger punchline.</li>
+        <li>A look that fits the overall cruise-app style far better.</li>
+      </ul>
+      <p>In other words: less apologizing, more brunch.</p>
+    </article>
   </section>
 
-  <p class="note">Bonus Vault • OFT Gold Fart Cruise App</p>
+  <section class="card callout">
+    <h2 class="section-title"><span class="icon">🏆</span>Final Judgment</h2>
+    <p>The Grok version survives as an important historical document: proof that even a usually fearless AI can suddenly become weirdly shy about trademarks.</p>
+    <p class="winner">Winner: ChatGPT — by a waffle.</p>
+    <p>Either way, the real winner is Palo. And yes — it’s still worth wearing pants for.</p>
+  </section>
+
+  <div class="footer-links">
+    <a class="btn btn-secondary" href="index.html">Return to Bonus Vault</a>
+    <a class="btn btn-primary" href="making-of-skechers.html">Next: Skechers Feature</a>
+  </div>
+  <p class="note">Palo Ad Showdown • OFT Gold Fart Cruise App</p>
 </main>
 
 
