@@ -51,7 +51,19 @@ h1{margin:0;color:var(--navy);font-size:clamp(2rem,8vw,3.05rem);line-height:1;le
 .fixedbtn span{font-size:1.25rem}
 .camera-input{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;clip-path:inset(50%)}
 
+body{padding-bottom:92px!important;}
 </style>
+
+<style id="oft-three-button-style">
+.oft-bottom-bar{position:fixed;left:0;right:0;bottom:0;z-index:9990;padding:9px 10px calc(9px + env(safe-area-inset-bottom));background:rgba(247,245,240,.96);border-top:1px solid #ddd3c6;backdrop-filter:blur(10px)}
+.oft-bottom-inner{max-width:760px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 58px minmax(0,1fr);gap:8px}
+.oft-bottom-btn{min-height:56px;border-radius:15px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:7px;font-family:Arial,sans-serif;font-weight:900;font-size:.88rem;line-height:1;text-align:center;box-sizing:border-box}
+.oft-bottom-daily{background:#D72638;color:white;border:2px solid #b51d2b}
+.oft-bottom-home{background:#F4C542;color:#0B1F3A;border:2px solid #d7aa22;font-size:1.45rem}
+.oft-bottom-camera{background:#0B1F3A;color:white;border:2px solid #19365f;cursor:pointer}
+.oft-camera-input{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap}
+</style>
+
 </head>
 <body>
 
@@ -68,7 +80,8 @@ h1{margin:0;color:var(--navy);font-size:clamp(2rem,8vw,3.05rem);line-height:1;le
 
 <div class="oft-lock" id="oft-lock"><div class="oft-lock-card">
 <div class="oft-lock-kicker">OFT SECURITY DEPARTMENT</div><h1>Prove You Belong Here</h1>
-<p>Congratulations! As Gold members in the Castaway Club, you are now more than halfway to Platinum. What level comes after Platinum?</p><form id="oft-lock-form"><input id="oft-lock-answer" type="text" autocomplete="off" autocapitalize="off" placeholder="Your answer"><button type="submit">UNLOCK</button></form>
+<p>Enter today’s answer.</p>
+<form id="oft-lock-form"><input id="oft-lock-answer" type="text" autocomplete="off" autocapitalize="off" placeholder="Your answer"><button type="submit">UNLOCK</button></form>
 <p class="oft-lock-error" id="oft-lock-error"></p><p class="oft-lock-note">Spaces and capitalization don’t matter.</p>
 </div></div>
 <script>
@@ -142,11 +155,15 @@ h1{margin:0;color:var(--navy);font-size:clamp(2rem,8vw,3.05rem);line-height:1;le
   <p class="note">Bonus Vault • OFT Gold Fart Cruise App</p>
 </main>
 
-<nav class="fixedbar" aria-label="Quick links">
-  <div class="fixedinner">
-    <a class="fixedbtn daily" href="../lineup.html" aria-label="Daily Disney — return to cruise lineup"><span>✨</span>DAILY DISNEY</a>
-    <label class="fixedbtn camera" for="oft-camera" aria-label="Smile, pal! Open camera"><span>📷</span>SMILE, PAL!</label>
-    <input id="oft-camera" class="camera-input" type="file" accept="image/*" capture="environment">
+
+
+
+<nav class="oft-bottom-bar" aria-label="OFT navigation">
+  <div class="oft-bottom-inner">
+    <a class="oft-bottom-btn oft-bottom-daily" href="/oft-disney-cruise-app/lineup.html"><span>✨</span>DAILY DISNEY</a>
+    <a class="oft-bottom-btn oft-bottom-home" href="/oft-disney-cruise-app/index.html" aria-label="Home" title="Home">🏠</a>
+    <label class="oft-bottom-btn oft-bottom-camera" for="oft-camera"><span>📷</span>SMILE, PAL!</label>
+    <input id="oft-camera" class="oft-camera-input" type="file" accept="image/*" capture="environment">
   </div>
 </nav>
 
